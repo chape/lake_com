@@ -1,0 +1,37 @@
+<template name="shop-list">
+    <!-- 这里加入循环 -->
+    <view class="tuan_container">
+        <!-- 店铺信息 -->
+        <view class="tuan_info">
+            <view class="item-left">
+                <image src="{{ item.avator }}"></image>
+            </view>
+
+            <view class="item-middle">
+                <text class="follow-user-name">{{ item.name }}</text>
+            </view>
+
+            <view class="item_right">
+                <text class='result' >拨打:</text>
+                <text class="follow-status" data-item="{{ item.phone }}" bindtap="callPhone" >{{ item.phone }}</text>
+            </view>
+        </view>
+
+        <!-- 店铺图片信息 -->
+        <view class="product_pic full">
+            <image src="{{ item.imgUrl }}"></image>
+        </view>
+
+        <!-- 店铺描述 -->
+        <view class="product_desc full">
+            <text>{{ item.desc }}</text>
+        </view>
+
+        <!-- 价格信息 -->
+        <view class="full">
+            <view class="item_right">
+                <text class="price_right">{{ item.price }} 元</text>
+            </view>
+        </view>
+    </view>
+</template>

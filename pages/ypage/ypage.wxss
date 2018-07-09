@@ -1,0 +1,2 @@
+/* pages/ypage/ypage.wxss */
+@import "../../templates/phone-view/phone-view.wxss";

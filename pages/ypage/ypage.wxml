@@ -1,0 +1,13 @@
+<!--pages/ypage/ypage.wxml-->
+<import src="../../templates/phone-view/phone-view.wxml"/>
+
+<loading hidden="{{hiddenLoading}}">数据加载中</loading>
+<view class="wrapper">
+  <!--repeat-->
+  <block wx:for="{{phoneList}}" wx:for-item="item" wx:key="{{ item.id }}" data-item="{{ item }}" >
+    <view class="discover_index">
+      <template is="phone-view" data="{{item}}"></template>
+    </view>
+  </block>
+  <view hidden="{{ hasMore }}" class="no-more">暂时没有更多内容</view>
+</view> 

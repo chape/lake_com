@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<!-- <loading hidden="{{hiddenLoading}}">数据加载中</loading> -->
+<import src="../../templates/shop-list/shop-list.wxml"/>
+
+<view class="wrapper">
+  <!--轮播图-->
+  <view class="swiper">
+    <swiper indicator-dots="{{true}}"
+  autoplay="{{true}}" interval="{{3000}}" duration="{{1000}}">
+      <block wx:for="{{lunboList}}" wx:key="">
+        <swiper-item class>
+          <image src="{{item.imgUrl}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>
+
+<!--售卖列表-->
+<view class="wrapper">
+  <block wx:for="{{shopList}}" wx:for-item="item" wx:key="{{ item.id }}" data-item="{{ item }}" >
+    <view class="discover_index">
+      <template is="shop-list" data="{{item}}"></template>
+    </view>
+  </block>
+  
+  <view hidden="{{ hasMore }}" class="no-more">
+    <text class="result">没有更多的内容了</text>
+  </view>
+</view> 

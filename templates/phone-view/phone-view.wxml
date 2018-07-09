@@ -1,0 +1,22 @@
+<template name="phone-view">
+
+  <view id="{{item.id}}" class="section">
+    <view class="flex-wrp flex-row">
+
+      <view class="item_left">
+        <image class="join_image" src='{{ item.imgUrl }}'></image>
+      </view>
+
+      <view class="item-middle item-center result">
+          <text>{{item.name}}</text>
+          <text>{{item.address}}</text>
+      </view>
+
+      <view class="item_right">
+        <view class="follow-status" data-item="{{ item.phone }}" bindtap='callPhone'>{{ item.phone }}</view>
+      </view>
+
+    </view>
+  </view>
+
+</template>

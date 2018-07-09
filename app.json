@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/ypage/ypage",
+    "pages/mine/mine",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#334a86",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark",
+    "navigationBarTitleText": "河畔新世界"
+  },
+  "tabBar": {
+    "color": "#878787",
+    "selectedColor": "#000",
+    "borderStyle": "black",
+    "backgroundColor": "#fcfcfc",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "imgs/home.png",
+        "selectedIconPath": "imgs/home_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/ypage/ypage",
+        "iconPath": "imgs/phone.png",
+        "selectedIconPath": "imgs/phone_active.png",
+        "text": "黄页"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "imgs/mine.png",
+        "selectedIconPath": "imgs/mine_active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
